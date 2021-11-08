@@ -1,0 +1,21 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    box-shadow: 0 0 10px #000a;
+    z-index: 10;
+    background-color: #222;
+}
+
+.footer span, a {
+    color: #fff;
+    font-size: 1rem;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

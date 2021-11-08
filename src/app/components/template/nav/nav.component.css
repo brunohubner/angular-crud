@@ -1,0 +1,21 @@
+.nav {
+    background-color: #ddd;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.sidenav {
+    background-color: #222;
+    box-shadow: 0 0 10px #000a;
+    width: 200px;
+}
+
+.sidenav i {
+    margin: 0 10px 0 5px;
+}
+
+.content {
+    padding: 0 20px 20px 20px;
+    background-color: #ddd;
+    color: #222;
+}
