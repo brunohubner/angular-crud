@@ -1,0 +1,12 @@
+.form {
+    background-color: #666;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form button {
+    margin: 10px 10px 0 0;
+}
