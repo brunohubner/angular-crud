@@ -25,7 +25,6 @@ export class ProductCreateComponent implements OnInit {
 
   createProduct(): void {
     this.productService.create(this.product)
-    this.productService.showMessage("Produto cadastrado com sucesso!")
     this.router.navigate(["products"])
   }
 

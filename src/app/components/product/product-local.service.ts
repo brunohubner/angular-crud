@@ -62,7 +62,7 @@ export class ProductLocalService {
 
   create(product: Product): Product {
     if (product.name.trim().length < 3 || product.price === null) {
-      this.showMessage("informe dados válidos!", true)
+      this.showMessage("Prencha todos os campos!", true)
       return product
     }
     const storage = this.getStorage()
@@ -76,6 +76,7 @@ export class ProductLocalService {
     })
 
     this.setStorage(products, count)
+    this.showMessage("Produto atualizado com sucesso!")
     return product
   }
 
@@ -95,7 +96,7 @@ export class ProductLocalService {
 
   update(product: Product): Product {
     if (product.name.trim().length < 3 || product.price === null) {
-      this.showMessage("informe dados válidos!", true)
+      this.showMessage("Prencha todos os campos!", true)
       return product
     }
     const products = this.getStorage().products
@@ -107,6 +108,7 @@ export class ProductLocalService {
       return 0
     })
     this.setStorage(newProducts, this.getCount())
+    this.showMessage("Produto atualizado com sucesso!")
 
     return product
   }
