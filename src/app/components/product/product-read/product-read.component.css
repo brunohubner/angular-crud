@@ -1,3 +1,25 @@
 table {
     width: 100%;
 }
+
+table .action-th {
+    padding-left: 20px;
+}
+
+table i {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+table i:hover {
+    background-color: #666;
+}
+
+.edit > i {
+    color: #d9cd26;
+    margin-right: 10px;
+}
+
+.delete > i {
+    color: #e35e6b;
+}
