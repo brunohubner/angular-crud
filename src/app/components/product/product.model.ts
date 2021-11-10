@@ -3,3 +3,8 @@ export interface Product {
     name: string
     price: number | null
 }
+
+export interface ProductLocal {
+    products: Product[]
+    count: number
+}

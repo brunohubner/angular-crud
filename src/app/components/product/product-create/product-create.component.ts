@@ -1,6 +1,6 @@
+import { ProductLocalService } from './../product-local.service';
 import { Product } from './../product.model';
 import { Router } from '@angular/router';
-import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -16,7 +16,7 @@ export class ProductCreateComponent implements OnInit {
   }
 
   constructor(
-    private productService: ProductService,
+    private productService: ProductLocalService,
     private router: Router
   ) { }
 
@@ -24,12 +24,11 @@ export class ProductCreateComponent implements OnInit {
   }
 
   createProduct(): void {
-    this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage("Produto cadastrado com sucesso!")
-      this.router.navigate(["products"])
-    })
+    this.productService.create(this.product)
+    this.productService.showMessage("Produto cadastrado com sucesso!")
+    this.router.navigate(["products"])
   }
-  
+
   cancel(): void {
     this.router.navigate(["products"])
   }
