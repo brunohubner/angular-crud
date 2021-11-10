@@ -29,6 +29,7 @@ export class ProductService {
   }
 
   create(product: Product): Observable<Product> {
+    if(product.name.trim().length < 3 || product.price === null) return EMPTY
     return this.http.post<Product>(this.baseUrl, product).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -50,6 +51,7 @@ export class ProductService {
   }
 
   update(product: Product): Observable<Product> {
+    if(product.name.trim().length < 3 || product.price === null) return EMPTY
     return this.http.put<Product>(`${this.baseUrl}/${product.id}`, product).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
