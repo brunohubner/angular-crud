@@ -9,7 +9,8 @@
     background-color: #222;
 }
 
-.footer span, a {
+.footer span,
+a {
     color: #fff;
     font-size: 1rem;
     text-decoration: none;
